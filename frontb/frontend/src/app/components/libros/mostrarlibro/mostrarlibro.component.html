@@ -1,7 +1,7 @@
 <div class="card">
     <p-table [paginator]="true" [rows]="5" [value]="libro" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header">
-            <tr>
+            <tr class="barra">
                 <th>id</th>
                 <th>titulo</th>
                 <th>numero de paginas</th>
@@ -10,7 +10,7 @@
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-libro>
-            <tr>
+            <tr class="tabla">
                 <td>{{ libro.id }}</td>
                 <td>{{ libro.titulo }}</td>
                 <td>{{ libro.numero_pagina }}</td>

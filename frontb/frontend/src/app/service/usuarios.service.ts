@@ -9,12 +9,16 @@ import { Observable } from 'rxjs';
 export class UsuariosService {
   api_uri_django = 'http://localhost:8000';
   base_path = `${this.api_uri_django}/usuarios/usuario/`
+ 
   constructor(
     private http:HttpClient
   ) { }
+  
   getAllUsuario(){
+   console.log (this.http.get<Usuarios[]>(this.base_path))
     return this.http
     .get<Usuarios[]>(this.base_path)
+    
   }
   postUsuario(usuarioData: any): Observable<any>{
     return this.http
